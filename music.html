@@ -1,0 +1,55 @@
+<link rel="stylesheet" type="text/css" href="js/sm2/css/sm2bar.css" />
+<div id="bgm" style="position:fixed;bottom:2px;right:5px;z-index:300px;">
+<div id="sm2-play-button" onclick="togglePlay();" class="sm2_bar sm2_playing"> 
+<div class="action"></div>
+</div>
+</div>
+
+<script>
+var playList=["./music/1.mp3"];
+var curIndex=0;
+//var playList=["./music/button-0.mp3","./music/button-1.mp3"];
+var playSound='';
+function playNext(playList,index){
+	if(index>=playList.length){
+		index=0;
+	}
+	curIndex=index;
+	playSound = soundManager.createSound({
+		url: playList[index]
+	});
+	playSound.play({
+	onfinish: function(){
+		playNext(playList,index+1);
+	}
+	});
+	console.log("playSound:"+playSound.id );
+}
+function initSm2(){
+	document.getElementById("bgm").style.display="block";
+	soundManager.setup({
+		preferFlash: false,
+		onready: function() {
+		document.getElementById("sm2-play-button").classList.remove("sm2_paused");
+		playNext(playList,curIndex);
+		}
+	});
+}
+function stopSm2(){
+	soundManager.stopAll();
+	document.getElementById("sm2-play-button").classList.add("sm2_paused");
+	document.getElementById("bgm").style.display="none";
+}
+function togglePlay(){
+	console.log("TogglePlay");
+	soundManager.togglePause(playSound.id);
+	if(document.getElementById("sm2-play-button").classList.contains("sm2_paused")){
+		document.getElementById("sm2-play-button").classList.remove("sm2_paused");
+		document.getElementById("sm2-play-button").classList.add("sm2_playing")
+	}else{
+		document.getElementById("sm2-play-button").classList.add("sm2_paused");
+		document.getElementById("sm2-play-button").classList.remove("sm2_playing");
+	}
+}
+initSm2();
+</script>

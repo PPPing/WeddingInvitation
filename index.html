@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Wedding of Ping&Mia</title>
+		<meta name="keywords" content="Mia photography,Wedding,Wedding Invitation,Ping ">
+		<meta name="description" content="Wedding Invitation of Ping and Mia">
+		<meta name="author" content="Zhong Ping" />
+	<style type="text/css">
+				@font-face {
+    font-family: 'learning_curve_proregular';
+    src: url('css/fonts/LearningCurve_OT-webfont.eot');
+    src: url('css/fonts/LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/LearningCurve_OT-webfont.woff') format('woff'),
+         url('css/fonts/LearningCurve_OT-webfont.ttf') format('truetype'),
+         url('css/fonts/LearningCurve_OT-webfont.svg#learning_curve_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body, p ,ul,li,span,a,img{
+margin:0;
+padding:0;
+}
+a,a:hover,a:visited{
+color:inherit;
+text-decoration: none;
+}
+body{
+	font-family: georgiab, serif;
+	background-color:#ffffff;
+	position:absolute;
+	height:100%;
+	width:100%;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	overflow:hidden;
+	
+	-webkit-transition: -webkit-transform 0.5s ease-out,left 0.5s ease-out;
+	-moz-transition: -moz-transform 0.5s ease-out,left 0.5s ease-out;
+	-o-transition: -o-transform 0.5s ease-out,left 0.5s ease-out;
+	transition: transform 0.5s ease-out,left 0.5s ease-out;
+}
+#bgm{
+	z-index:300;
+	opacity:0.75;
+}
+.container{
+		position:absolute;
+		top:0;	
+		left:0;
+		width:100%;
+		height:100%;
+		margin:0 auto;
+}
+#content{
+	position:relative;
+	width:100%;
+	background:transparent;
+	z-index:4;
+	color:rgba(255, 255, 255, 1);
+}
+#container.loaded #bg-blur{
+	opacity:1;
+}
+
+@media (max-width: 720px) {
+body.gallery{
+		/* left:-100%; */
+		-webkit-transform: translate3d(-100%,0,0);
+		-moz-transform: translate3d(-100%,0,0);
+		-o-transition:translate3d(-100%,0,0);
+		transform: translate3d(-100%,0,0);
+		overflow-x:hidden;
+		overflow-y:scroll;		
+}
+#bg{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:auto 100%  ;
+	background-image: url('images/cover_720.jpg');
+	z-index:0;
+	opacity:1;
+	-webkit-transition: opacity 0.5s ease-out;
+	-moz-transition: opacity 0.5s ease-out;
+	-o-transition: opacity 0.5s ease-out;
+	transition: opacity 0.5s ease-out;
+} 
+#container.loaded #bg{
+	opacity:0;
+} 
+#bg-blur{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:auto 100%  ;
+	background-image: url('images/cover_720_blur.jpg');
+	opacity:0;
+	z-index:1;
+	-webkit-transition: opacity 2s ease-out 0.7s;
+	-moz-transition: opacity 2s ease-out 0.7s;
+	-o-transition: opacity 2s ease-out 0.7s;
+	transition: opacity 2s ease-out 0.7s;
+}
+#container.loaded #bg-blur{
+	opacity:1;
+	}
+	#logo{	
+	 width:100%;
+	 margin-top:5%;
+	}
+	#header{
+	 background-color:rgba(126,126,126,0.27);
+	 -webkit-transform: translate3d(0, 250px,0);
+	-moz-transform: translate3d(0, 250px,0);
+	-o-transform: translate3d(0, 250px,0);
+	-ms-transform: translate3d(0, 250px,0);
+	-webkit-transition:  -webkit-transform 1s ease-out,background-color 1s ease-out ;
+	-moz-transition: -moz-transform 1s ease-out,background-color 1s ease-out;
+	-o-transition: -o-transform 1s ease-outm,background-color 1s ease-out;
+	transition: transform 1s ease-out,background-color 1s ease-out;
+	}
+
+	#logo div:nth-child(1){ 
+	 font-size:250%;
+	 text-align:center;
+	}
+	#logo div:nth-child(2){
+		font-size:150%;
+		text-align:center;	
+		line-height:25px;
+	}
+	#container.loaded   >#content>#header{
+		 -webkit-transform: translate3d(0, 0,0);
+		-moz-transform: translate3d(0, 0,0);
+		-o-transform: translate3d(0, 0,0);
+		-ms-transform: translate3d(0, 0,0);
+		 background-color:rgba(126,126,126,0);
+	} 
+	#name{
+	width:100%;
+	margin-top:30px;
+	font-family: 'learning_curve_proregular';
+	font-size:400%;
+	text-align:center;
+
+	}
+	#container.loaded  >#content>#header>#logo div:nth-child(1){
+		
+	}
+	#container.loaded  >#content>#header>#name{
+		
+	}
+	#container.loaded  >#content>#action,#container.loaded  >#content>#details{
+		opacity:1;
+		 -webkit-transform: translate3d(0, 0,0);
+		-moz-transform: translate3d(0, 0,0);
+		-o-transform: translate3d(0, 0,0);
+		-ms-transform: translate3d(0, 0,0);
+	}
+	#action{
+	width:100%;
+	text-align:center;
+	margin-top:5%;
+	opacity:0;
+	-webkit-transition: opacity 1s ease-out 1s;
+	-moz-transition:opacity 1s ease-out 1s;
+	-o-transition:opacity 1s ease-out 1s;
+	transition:opacity 1s ease-out 1s;
+	cursor:pointer;
+	}
+	#action > .clicker{
+	 -webkit-transform: translate3d(0, 0,0);
+		-moz-transform: translate3d(0, 0,0);
+		-o-transform: translate3d(0, 0,0);
+		-ms-transform: translate3d(0, 0,0);
+		transform: translate3d(0, 0,0);
+	text-align:center;
+	width:55px;
+	height:55px;
+	margin:0 auto 15px auto;
+	line-height:55px;
+	vertical-align:middle;
+	border:1px solid #ffffff;
+	border-radius:30px;
+	-webkit-animation: Bounce 2s infinite forwards;
+	-moz-animation: Bounce 2s infinite forwards;
+	-o-animation: Bounce 2s infinite forwards;
+	animation: Bounce 2s infinite forwards;
+	}
+	#action>a{
+	margin:0 auto;
+	padding:3px 5px;
+	border:1px solid #ffffff;
+	}
+	#details{
+	opacity:0;
+	margin-top:8%;
+	width:100%;
+	font-size:100%;
+	text-align:center;
+	-webkit-transform: translate3d(0, 50px,0);
+	-moz-transform: translate3d(0, 50px,0);
+	-o-transform: translate3d(0, 50px,0);
+	-ms-transform: translate3d(0, 50px,0);
+	transform: translate3d(0, 0,0);
+	-webkit-transition:  -webkit-transform 1s ease-out 1.5s,opacity 1s ease-out 1.5s;
+	-moz-transition: -moz-transform 1s ease-out 1.5s,opacity 1s ease-out 1.5s;
+	-o-transition: -o-transform 1s ease-outm 1.5s,5opacity 1s ease-out 1.5s;
+	transition: transform 1s ease-out 1.5s,opacity 1s ease-out 1.5s;
+	}
+	#details #map{
+	width:200px;
+	height:150px;
+	margin:0 auto;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:auto 100%  ;
+	background-image: url('images/map_raw.png');
+	}
+	#gallery{
+	position:absolute;
+	display:none;
+	top:0;
+	-webkit-transform: translate3d(100%,0,0);
+	-moz-transform: translate3d(100%,0,0);
+	-o-transition:translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
+	width:100%;
+	height:auto;
+	background-color:#ffffff;
+	z-index:2;
+	}
+	#navbar{
+		position:fixed;
+		width:100%;
+		height:50px;
+		background-color:#ffffff;
+		color:#666666;
+		text-align:center;
+		overflow:hidden;
+		z-index:100;
+		border-bottom:1px solid #cccccc;
+	}
+	#navbar #switch{
+		position:absolute;
+		left:0;
+		top:0;
+		padding:10px 7px;
+		opacity:0.6;
+		cursor:pointer;
+		z-index:200;
+	}
+	#navbar #navbar-logo{
+		height:50px;
+		line-height:50px;
+	}
+	.section{
+		width:100%;
+		color:#666666;
+		border-bottom:1px solid rgba(213, 213, 213, 0.64);
+	}
+	.section >img.first{
+		margin-top:55px;
+	}
+	.section>img{
+		width:90%;
+		margin:15px 5% 0 5%;
+	}
+	.section .bottom-bar{
+		width:100%;
+		height:50px;
+		border-top:1px solid rgba(213, 213, 213, 0.44);
+		padding:5px 10px;
+	}
+}
+@media (min-width: 720px) {
+	#bg{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-image: url('images/cover_1080.jpg');
+	z-index:0;
+	opacity:1;
+	-webkit-transition: opacity 0.5s ease-out;
+	-moz-transition: opacity 0.5s ease-out;
+	-o-transition: opacity 0.5s ease-out;
+	transition: opacity 0.5s ease-out;
+	}
+	#container.loaded #bg{
+	opacity:0;
+} 
+#bg-blur{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:cover  ;
+	background-image: url('images/cover_1080_blur.jpg');
+	opacity:0;
+	z-index:1;
+	-webkit-transition: opacity 2s ease-out 0.7s;
+	-moz-transition: opacity 2s ease-out 0.7s;
+	-o-transition: opacity 2s ease-out 0.7s;
+	transition: opacity 2s ease-out 0.7s;
+}
+	#container.loaded #bg-blur{
+	opacity:1;
+	}
+	#logo{	
+	 width:100%;
+	 margin-top:100px;
+	}	
+
+	#logo div:nth-child(1){ 
+	 font-size:300%;
+	 text-align:center;
+	}
+	#logo div:nth-child(2){
+		font-size:200%;
+		text-align:center;	
+		line-height:35px;
+	}
+	#header{
+	 background-color:rgba(126,126,126,0.27);
+	 -webkit-transform: translate3d(0, 230px,0);
+	-moz-transform: translate3d(0, 230px,0);
+	-o-transform: translate3d(0, 230px,0);
+	-ms-transform: translate3d(0, 230px,0);
+	transform: translate3d(0, 230px,0);
+	-webkit-transition:  -webkit-transform 1s ease-out,background-color 1s ease-out ;
+	-moz-transition: -moz-transform 1s ease-out,background-color 1s ease-out;
+	-o-transition: -o-transform 1s ease-outm,background-color 1s ease-out;
+	transition: transform 1s ease-out,background-color 1s ease-out;
+	}
+	#container.loaded   >#content>#header{
+		 -webkit-transform: translate3d(0, 0,0);
+		-moz-transform: translate3d(0, 0,0);
+		-o-transform: translate3d(0, 0,0);
+		-ms-transform: translate3d(0, 0,0);
+		transform: translate3d(0, 0,0);
+		 background-color:rgba(126,126,126,0);
+	} 
+	#name{
+	width:100%;
+	margin-top:60px;
+	font-family: 'learning_curve_proregular';
+	font-size:600%;
+	text-align:center;
+	-webkit-transition: opacity 1s ease-out 1s;
+	-moz-transition: opacity 1s ease-out 1s;
+	-o-transition: opacity 1s ease-out 1s;
+	transition: opacity 1s ease-out 1s;
+	}
+
+	#container.loaded  >#content>#action,#container.loaded  >#content>#details{
+		opacity:1;
+	}
+	#action{
+	width:100%;
+	text-align:center;
+	margin-top:20px;
+	opacity:0;
+	-webkit-transition: opacity 1s ease-out 1.5s;
+	-moz-transition: opacity 1s ease-out 1.5s;
+	-o-transition: opacity 1s ease-out 1.5s;
+	transition: opacity 1s ease-out 1.5s;
+	cursor:pointer;
+	}
+	#action > .clicker{
+	 -webkit-transform: translate3d(0, 0,0);
+		-moz-transform: translate3d(0, 0,0);
+		-o-transform: translate3d(0, 0,0);
+		-ms-transform: translate3d(0, 0,0);
+		transform: translate3d(0, 0,0);
+	text-align:center;
+	width:55px;
+	height:55px;
+	margin:0 auto 15px auto;
+	line-height:55px;
+	vertical-align:middle;
+	border:1px solid #ffffff;
+	border-radius:30px;
+	-webkit-animation: Bounce 2s infinite forwards;
+	-moz-animation: Bounce 2s infinite forwards;
+	-o-animation: Bounce 2s infinite forwards;
+	animation: Bounce 2s infinite forwards;
+	}
+	#action>a{
+	margin:0 auto;
+	padding:3px 5px;
+	border:1px solid #ffffff;
+	}
+	
+	#details{
+	margin-top:30px;
+	width:100%;
+	font-size:100%;
+	text-align:center;
+	opacity:0;
+	-webkit-transition: opacity 1s ease-out 2s;
+	-moz-transition: opacity 1s ease-out 2s;
+	-o-transition: opacity 1s ease-out 2s;
+	transition: opacity 1s ease-out 2s;
+	}
+	#details #map{
+	width:300px;
+	height:225px;
+	margin:0 auto;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:auto 100%  ;
+	background-image: url('images/map_raw.png');
+	}
+	#gallery{	
+	display:none;
+	position:absolute;
+	top:100%;
+	width:100%;
+	height:auto;
+	background-color:#ffffff;
+	z-index:2;
+	}
+	body.gallery{
+		/* left:-100%; */
+		-webkit-transform: translate3d(0,-100%,0);
+		-moz-transform: translate3d(0,-100%,0);
+		-o-transition:translate3d(0,-100%,0);
+		transform: translate3d(0,-100%,0);
+		overflow-x:hidden;
+		overflow-y:scroll;		
+	}
+	#navbar{
+		position:relative;
+		width:100%;
+		height:50px;
+		background-color:#ffffff;
+		text-align:center;
+		overflow:hidden;
+		z-index:100;
+		color:#666666;
+		border-bottom:1px solid #cccccc;
+	}
+	#navbar #switch{
+		position:absolute;
+		left:0;
+		top:0;
+		padding:10px 7px;
+		opacity:0.6;
+		cursor:pointer;
+		z-index:200;
+	}
+	#navbar #navbar-logo{
+		height:50px;
+		line-height:50px;
+	}
+	.section{
+		width:720px;
+		margin:0 auto;
+		color:#666666;
+		border-bottom:1px solid rgba(213, 213, 213, 0.64);
+	}
+	
+	.section>img{
+		width:720px;
+		margin:15px auto 5px auto;
+		display:block;
+	}
+	
+	.section .bottom-bar{
+		width:100%;
+		height:80px;
+		border-top:1px solid rgba(213, 213, 213, 0.44);
+		padding:5px 10px;
+	}
+}
+
+@-webkit-keyframes Bounce{
+		0% {
+			-webkit-transform: translate3d(0, 0,0);
+			-moz-transform: translate3d(0, 0,0);
+			-o-transform: translate3d(0, 0,0);
+			-ms-transform: translate3d(0, 0,0);
+			transform: translate3d(0, 0,0);
+			animation-timing-function: ease-in-out;
+		}  
+		70% {
+			 -webkit-transform: translate3d(0, 3px,0);
+			-moz-transform: translate3d(0, 3px,0);
+			-o-transform: translate3d(0, 3px,0);
+			-ms-transform: translate3d(0, 3px,0);
+			transform: translate3d(0, 3px,0);
+			animation-timing-function: ease-in;
+		}
+		100% {
+			-webkit-transform: translate3d(0, 0,0);
+			-moz-transform: translate3d(0, 0,0);
+			-o-transform: translate3d(0, 0,0);
+			-ms-transform: translate3d(0, 0,0);
+			transform: translate3d(0, 0,0);
+        
+		}
+}
+	</style>
+	</head>
+	<body>
+		<div id="container" class="container">		
+			<div id="bg">
+			</div>
+			<div id="bg-blur">
+			</div> 
+			<div id="content">
+				<div id="header">
+				<div id="logo">					
+					<div><strong>Wedding</strong></div><div>Invitation</div>
+				</div>
+				<div id="name">					
+					<strong>Ping & Mia</strong>
+				</div>
+				</div>
+				<div id="action">
+					<div class="clicker" style="" onclick="switchMode()"><strong>点这里</strong></div>
+					<a onclick="switchMode()"><strong>告诉你我们的故事</strong></a>
+				</div>
+				<div id="details">					
+					<div>Sep 6th, 6:30 pm</div>
+					<div>科尔海悦酒店</div>
+					<div id="map"></div>
+				</div>
+			</div>
+			
+			<div id="gallery">
+				<div id="navbar">
+					<div id="switch" onclick="switchMode()">
+						<img src="images/menu_black.png">
+					</div>
+					<div id="navbar-logo"><a href="./index.html"> Ping&Mia </a>
+					</div>
+				</div>
+					<div class="section">
+						<img class="first" style="" src="images/gallery/1_13years.jpg">
+						<div class="bottom-bar">
+							<p>
+							16年前，我们在这里相识。
+							</p>
+						</div>
+					</div>
+					<div class="section">
+						
+						<img style="" src="images/gallery/2_meetagain.jpg">
+						<div class="bottom-bar">
+							<p>
+							3年前，我们因为共同的爱好在这里相遇，拍下了彼此三年未变的QQ头像。
+							</p>
+						</div>
+					</div>
+					<div class="section">						
+						<img style="" src="images/gallery/3_time.jpg">
+						<div class="bottom-bar">
+							<p>							
+							读书、工作，飞快的脚步让每次短暂的旅行都弥足珍贵。
+							</p>
+						</div>
+					</div>
+					<div class="section">						
+						<img style="" src="images/gallery/4_fun.jpg">
+						<div class="bottom-bar">
+							<p>							
+							三年的聚少离多，让我们更加珍惜每一个卖萌搞笑的机会。
+							</p>
+						</div>
+					</div>
+					<div class="section">						
+						<img style="" src="images/gallery/5_life.jpg">
+						<div class="bottom-bar">
+							<p>
+							我们已准备好了新的开始。
+							</p>
+						</div>				
+					</div>
+					<div class="section">
+						<div style="width:100%;text-align:center;font-size:400%"><strong>Join us</strong></div>
+						<div style="width:100%;text-align:center;font-size:150%;margin-top:100px;">网站开发与设计</div>
+						<div style="width:100%;text-align:center;font-size:200%"><strong>Ping</strong></div>
+						<div style="width:100%;text-align:center;font-size:150%;margin-top:30px;">摄影师</div>
+						<div style="width:100%;text-align:center;font-size:200%"><strong>Mia</strong></div>
+					</div>
+			</div>
+		</div>
+		
+	</body>
+	<style>
+	</style>
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/sm2/script/soundmanager2-jsmin.js"></script>
+	<script>
+		var browser_mode="destop";//{"destop","mobile"}
+		var winHeight=$(window).height();
+		var winWidth=$(window).width();
+		window.onresize = function(event) {
+			winHeight=$(window).height();
+			winWidth=$(window).width();	
+			detectBrowserMode( winWidth );
+		};
+		function detectBrowserMode( winWidth ){
+			if(winWidth>=720){
+				browser_mode="destop";
+				console.log("Destop Mode");
+			}else{
+				browser_mode="mobile";
+				console.log("Mobile Mode");
+				stopMusic();
+			}
+		}
+		var musicLoaded=false;
+		function playMusic(){
+			if(!musicLoaded){
+				console.log("PlayerMusic");
+				$.ajax({
+				url:"music.html",
+				context: document.body
+				}).done(function(data) {
+					console.log("Music Loaded!");
+					jQuery('body').append(data);
+					musicLoaded=true;
+				});
+			}else{
+				initSm2();
+			}
+		}
+		function stopMusic(){
+			if(musicLoaded){
+				stopSm2();
+			}
+		}
+		jQuery(window).load(function(){
+			console.log("finish load");
+			setTimeout(function(){
+				$("#container").removeClass("loading").addClass("loaded");
+			}, 2000);
+			detectBrowserMode( winWidth );
+			if(browser_mode=="destop"&&!navigator.userAgent.match(/ipad|iphone/i)!=null){
+				playMusic();
+			}
+		});
+		var mode="home";
+		function switchMode(){
+			if(mode=="home"){
+				console.log('switchToGallery');
+				$("body").addClass("gallery");
+				$("#gallery").fadeIn();
+				mode="gallery";
+			}else if(mode=="gallery"){
+				console.log('switchToHome');
+				$("body").removeClass("gallery");
+				$("#gallery").fadeOut();
+				mode="home";
+			}
+		}
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
