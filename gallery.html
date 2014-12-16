@@ -1,0 +1,88 @@
+<div id="thumnails">
+<ul>
+
+</ul>
+<script src="js/imagelist.js">
+</script>	
+</div>
+<script>
+var type=$("#nav li").eq(curNavIndex).find("a").data("type");
+lastGalleryType=type;
+console.log("type:"+type);
+var imagelist=fulllist[$("#nav li").eq(curNavIndex).find("a").data("type")];
+var delay=1;
+loadThunmail(0);
+centerThumPos();
+function centerThumPos(){
+	var width=$("#thumnails").width();
+	console.log("thumnails width:"+width);
+	var columns=Math.floor(width/171);
+	console.log("columns:"+columns);
+	var offsetLeft=Math.floor((width-columns*171)/2);
+	console.log("offsetLeft:"+offsetLeft);
+	$("#thumnails").css("left",offsetLeft+"px");
+	$("#thumnails>ul>li").last().css("width",171*columns+"px").css("opacity","1");
+}
+
+function loadThunmail(index){
+	if(index>=imagelist.length){
+		console.log("finish Load Thunmails");
+		var bottom="<li id='last' style='height:20px;padding:0;display:block;'><div style='opacity:1;' class='horizon bottom'></div></li>"
+		$("#thumnails>ul").append(bottom);
+		centerThumPos();
+		return;
+	}
+	
+	//console.log(imagelist);
+	//return;
+	var path=imagelist[index];
+	//console.log(index+":"+path);
+	var img = $("<img />").attr('src', 'images/'+type+'/thumnails/'+path)
+	.load(function() {
+        if (!this.complete || typeof this.naturalWidth == "undefined" || this.naturalWidth == 0) {
+            alert('broken image!');
+        } else {
+			var li=$("<li />").attr("id",index).data("path",path).append(img).on("click",function(){
+				//console.log($(this).attr("id")+":"+$(this).data("path"));
+				$("#container").removeClass(curPage).addClass("fullImage");
+				curPage="fullImage";
+				var curIndex=$("#imageViewer #window").data("index");
+				var nextIndex=$(this).attr("id");
+				$("#imageViewer").css("background-image","url('images/icon/loading.gif')");
+				if(nextIndex!=curIndex){
+					$("#imageViewer #window").css("visibility","hidden").data("index",$(this).attr("id"))
+					.attr("src","images/"+type+"/"+$(this).data("path"))
+					.load(function(){
+						$(this).css("visibility","visible");
+						$("#imageViewer").css("background-image","none");
+					});
+				}
+			});
+            $("#thumnails>ul").append(li);
+			loadThunmail(index+1);
+			window.setTimeout(function(){li.addClass("show")},delay);
+			delay+=50;
+        }
+    }); 
+}
+</script>
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

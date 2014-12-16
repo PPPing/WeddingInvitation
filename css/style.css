@@ -270,6 +270,11 @@ body.gallery{
 		border-top:1px solid rgba(213, 213, 213, 0.44);
 		padding:5px 10px;
 	}
+	#ending{
+		width:100%;
+		height:100%;
+		background-color:#cccccc;
+	}
 }
 @media (min-width: 720px) {
 	#bg{
@@ -474,6 +479,7 @@ body.gallery{
 		border-top:1px solid rgba(213, 213, 213, 0.44);
 		padding:5px 10px;
 	}
+	
 }
 
 @-webkit-keyframes Bounce{

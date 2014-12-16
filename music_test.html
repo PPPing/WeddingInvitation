@@ -1,0 +1,68 @@
+<html><head><link rel="stylesheet" type="text/css" href="js/skin/jplayer.blue.monday.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://a111jax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script type="text/javascript" src="js/jplayer/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="js/jplayer/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var myPlaylist = new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {
+                title:"1.mp3",
+                mp3:"./music/1.mp3"
+            } ,
+            {
+                title:"2.mp3",
+                mp3:"./music/2.mp3"
+            }
+        ], {
+            playlistOptions: {
+                autoPlay: true,
+                loopOnPrevious:true,
+                shuffleOnLoop: true,
+                enableRemoveControls: true
+            },
+            swfPath: "js",
+            supplied: "mp3"
+        });
+
+        $('.jp-repeat').click();
+        $('.jp-playlist').hide();
+    });
+   
+    function jpyclick(){
+        $('.jp-play').click();
+    }
+    function jpeclick(){
+        $('.jp-pause').click();
+    }
+</script>
+</head><body><div id="jp_container_1" class="jp-video jp-video-270p">
+    <div class="jp-type-playlist">
+        <div id="jquery_jplayer_1" class="jp-jplayer" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="./res/music/1.mp3"></audio></div>
+        <div class="jp-gui">
+            <div class="jp-video-play" style="display: none;">
+                <a href="javascript:;" class="jp-video-play-icon" tabindex="1">play</a>
+            </div>
+            <div class="jp-interface">
+                <div class="jp-controls-holder">
+                    <ul class="jp-controls">                       
+                        <li><a href="javascript:;" class="jp-play" tabindex="1" style="display: block;">play</a></li>
+                        <li><a href="javascript:;" class="jp-pause" tabindex="1" style="display: none;">pause</a></li>                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="jp-playlist" style="display: none;">
+            <ul><li class="jp-playlist-current"><div><a href="javascript:;" class="jp-playlist-item-remove">¡Á</a><a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="1">1.mp3</a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove">¡Á</a><a href="javascript:;" class="jp-playlist-item" tabindex="1">2.mp3</a></div></li></ul>
+        </div>
+        <div class="jp-no-solution" style="display: none;">
+            <span>Update Required</span>
+            To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+        </div>
+    </div>
+</div>
+</body></html>
